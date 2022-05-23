@@ -14,6 +14,15 @@
             font-family: 'Uthmani';
             src: url('../assets/font/UthmanicHafs1Ver09.otf') format('truetype');
         }
+        h2{
+            color:white;
+            font-family : 'Montserrat';
+            margin-left: 10px;
+        }
+        .header{
+            margin-top:0;
+            background-color:#3bb78f;
+        }
 
         .arabic{
             font-family: 'Uthmani',serif;
@@ -23,30 +32,60 @@
             padding: - 5px;
             margin: 0;
         }
+
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .bot-header{
+            position:relative;
+            top:30px;
+            background-image:linear-gradient(315deg, #7ee8fa 0%,#80ff72 74%);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            
+        }
+        .bot-header a{
+            color:black;
+            margin:20px;
+        }
+        
     </style>
 
   </head>
   <body>
-        <br>
         <div class="container">
-        <h2 class="text-center">Quran Reader - Kelompok 3</h2>
-        <hr>
-        <?php
-            include '../search/search.php'; 
+            <div class=header>
+                <h2 class="text-center">Quran Reader</h2>
+            
+            <div class=bot-header>
 
-            session_start();
-            if (isset($_SESSION['email'])) {
-                echo "<div>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b> <br>";
-        ?>
-        <?php 
-                echo '<a href="../login, register, forgot password/login.php" class="text-left">Log out</a></div>';
-            } else {
-                echo '<a href="../login, register, forgot password/login.php" class="text-left">Login</a>';
-            }
-        ?>
-        <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
-        <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
+            <img src="../assets/tulisan_alquran.svg" alt="Italian Trulli" class="center">
+                <hr>
+                <?php
+                    include '../search/search.php'; 
 
+                    session_start();
+                    if (isset($_SESSION['email'])) {
+                        echo "<div>Mari kita berbuat baik hari ini <b>$_SESSION[username]</b> <br>";
+                ?>
+
+                <?php 
+                    echo '<a href="../login, register, forgot password/login.php" class="text-left">Log out</a></div>';
+                    } else {
+                    echo '<a href="../login, register, forgot password/login.php" class="text-left">Login</a>';
+                    }
+                ?>
+                
+                <a href="../jadwal/jadwal.php" class="text-left">Setel Reminder</a>
+                <a href="../download/download.php?path=al-qur'an.pdf" class="text-left">Download PDF</a>
+                <br>
+            </div>
+            </div>
         <br><br>
         <table class="table table-striped table-bordered">
             <tr>
